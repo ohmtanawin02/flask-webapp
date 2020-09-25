@@ -8,7 +8,7 @@ app = Flask(__name__)
 mysql = MySQL(app)
 
 app.secret_key = 'mysecret'
-# Enter your database connection details below
+# Connec Database
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'ome0895114530'
@@ -16,7 +16,7 @@ app.config['MYSQL_DB'] = 'pythonlogin'
 
 @app.route('/pythonlogin/', methods=['GET', 'POST'])
 def login():
-    # Output message if something goes wrong...
+    # Output message if something goes wrong
     msg = ''
     # Check if "username" and "password" POST requests exist (user submitted form)
     if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
